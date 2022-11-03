@@ -9,10 +9,6 @@ const CenterTitle = () => {
         let path = `/aboutgsocmania`;
         navigate(path);
     }
-    const routeChange2 = () => {
-        let path = `/aboutgsocmania`;
-        navigate(path);
-    }
 
     return (
         <div id="text_div center_all">
@@ -25,8 +21,8 @@ const CenterTitle = () => {
                     <button className="explore-btn" onClick={routeChange}>
                         Explore
                     </button>
-                    <a href="https://www.google.com/" target="_blank">
-                        <button className="explore-btn" onClick={routeChange2}>
+                    <a href="https://pages.razorpay.com/pl_KbWga6Klhhljbi/view" target="_blank">
+                        <button className="explore-btn">
                             Buy a Ticket
                         </button>
                     </a>
