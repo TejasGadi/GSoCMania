@@ -31,9 +31,9 @@ const AnimateRoutes = () => {
                 <Route path="/timeline"
                     element={<Timeline />}
                 />
-                <Route path="/bookticket"
+                {/* <Route path="/bookticket"
                     element={<AboutMentors />}
-                />
+                /> */}
             </Routes>
         </AnimatePresence>
     )

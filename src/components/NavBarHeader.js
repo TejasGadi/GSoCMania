@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components';
 import { gsap } from 'gsap';
 import Cursor from './Cursor';
-import Footer from './Footer';
 
 const NavBarHeader = () => {
 
@@ -64,7 +63,7 @@ const NavBarHeader = () => {
                 <NavLinks class="nav-links">
                     <a href="/"><h3>Home</h3></a>
                     <a href="/aboutgsocmania"><h3>About GSOC Mania</h3></a>
-                    <a href="/bookticket"><h3>Book Ticket</h3></a>
+                    <a href="https://pages.razorpay.com/pl_KbWga6Klhhljbi/view" target="_blank"><h3>Book Ticket</h3></a>
                     <a href="/mentors"><h3>Mentors</h3></a>
                     <a href="/timeline"><h3>Event Timeline</h3></a>
                 </NavLinks>
@@ -87,7 +86,7 @@ const NavHeader = styled.div`
     left: 0;
     z-index: 3;
     /* background: #a0a0a066; */
-    background: #000000aa;
+    background: #000000cb;
     min-height: 10vh;
     display: flex;
     justify-content: space-between;
