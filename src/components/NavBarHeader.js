@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components';
 import { gsap } from 'gsap';
+import CustomEase from "gsap/CustomEase";
 import Cursor from './Cursor';
 
 const NavBarHeader = () => {
@@ -20,6 +21,8 @@ const NavBarHeader = () => {
 
         const navlogo = currentTarget.parentNode.children[0].children[0];
         const navwindow = currentTarget.parentNode.parentNode.children[1];
+        gsap.registerPlugin(CustomEase);
+        CustomEase.create("custom", "M0,0 C0,0.408 0.153,0.637 0.222,0.608 0.3,0.574 0.584,1 1,1 ")
 
         // Toggle hamburger icon
         if (!currentTarget.classList.contains("active")) {
@@ -29,6 +32,7 @@ const NavBarHeader = () => {
             gsap.to(navlogo, { color: "white", duration: 0.5 });
 
             gsap.to(navwindow, { clipPath: "circle(3000px at 100% -10%)", duration: 0.75 });
+            // gsap.to(navwindow, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.75, ease: "power2.out" });
             currentTarget.classList.add("active");
             document.body.classList.add("hide");
 
@@ -38,7 +42,8 @@ const NavBarHeader = () => {
             gsap.to(currentTarget, { color: "white" });
             gsap.to(navlogo, { color: "white", duration: 0.5 });
 
-            gsap.to(navwindow, { clipPath: "circle(50px at 100% -10%)", duration: 0.5 });
+            gsap.to(navwindow, { clipPath: "circle(50px at 100% -10%)", duration: 0.75 });
+            // gsap.to(navwindow, { clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", duration: 0.75, ease: "power2.out" });
             currentTarget.classList.remove("active");
             document.body.classList.remove("hide");
 
@@ -107,6 +112,7 @@ const NavWindow = styled.nav`
     justify-content: space-around;
     align-items: center;
     opacity: 1;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); */
     clip-path: circle(50px at 100% -10%);
     -webkit-clip-path: circle(50px at 100% -10%);
     flex-wrap: wrap;

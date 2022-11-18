@@ -141,14 +141,6 @@ const Home = () => {
                                                     resize: false
                                                 },
                                                 modes: {
-                                                    attract: {
-                                                        distance: 200,
-                                                        duration: 0.4,
-                                                        easing: "ease-out-quad",
-                                                        factor: 1,
-                                                        maxSpeed: 50,
-                                                        speed: 1
-                                                    },
                                                     bounce: {
                                                         distance: 200
                                                     },
@@ -191,14 +183,14 @@ const Home = () => {
                                                         duration: 0.4,
                                                         factor: 100,
                                                         speed: 1,
-                                                        maxSpeed: 50,
+                                                        maxSpeed: 10,
                                                         easing: "ease-out-quad",
                                                         divs: {
                                                             distance: 200,
                                                             duration: 0.4,
                                                             factor: 100,
                                                             speed: 1,
-                                                            maxSpeed: 50,
+                                                            maxSpeed: 10,
                                                             easing: "ease-out-quad",
                                                             selectors: []
                                                         }
